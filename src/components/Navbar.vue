@@ -1,13 +1,12 @@
 <template>    
     <div id="nav">
         <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
     </div>
 </template>
 
 <script>
 export default {
-
+    name:"Navbar"
 }
 </script>
 
@@ -15,21 +14,14 @@ export default {
 
 #nav {
     width: 100%;
-    padding: 0px;
+    padding: 0px 30px;
     display: flex;
     height: var(--navbar-height);
     position: fixed;
     top:0px;
-    color:var(--theme-color);
-    background-color: var(--text-color);
-}
-#nav::after{
-    content: "";
-    height: 20px;
-    width: 100%;
-    position: fixed;
-    top:var(--navbar-height);
-    background-image: linear-gradient(var(--text-color),var(--theme-color));
+    color:var(--text-color);
+    margin-left: var(--contacts-width);
+    z-index: 1000;
 }
 
 #nav a {
@@ -39,7 +31,19 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-    color: #42b983;
+    color: var(--line-color);
 }
 
+#nav a:hover{
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+
+
+</style>
+<style>
+:root{
+    --navbar-height: 5%;
+}
 </style>

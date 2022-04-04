@@ -19,12 +19,26 @@ body,
 #app {
     margin: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    color: var(--text-color);
+    background-color: var(--theme-color);
+}
+a{
+    text-decoration: none;
     color: var(--text-color);
 }
+a:hover{
+    cursor: pointer;
+    color: var(--highlight-color);
+}
 :root{
-    --navbar-height: 5%;
-    --text-color: black;
-    --theme-color: white;
+    --text-color: rgb(0, 0, 0);
+    --lighter-text-color: #8b8b8b;
+    --highlight-color: #e09812;
+    --theme-color: rgb(255, 255, 255);
+    --secondary-color: rgb(206, 206, 206);
+    --line-color: rgb(255, 135, 23);
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 </style>

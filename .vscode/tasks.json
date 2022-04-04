@@ -5,8 +5,14 @@
 			"type": "npm",
 			"script": "serve",
 			"problemMatcher": [],
-			"label": "npm: serve",
-			"detail": "vue-cli-service serve"
+			"label": "serve"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "build"
 		}
 	]
 }
