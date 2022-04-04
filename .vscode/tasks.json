@@ -13,6 +13,13 @@
 			"group": "build",
 			"problemMatcher": [],
 			"label": "build"
+		},
+		{
+			"type": "npm",
+			"script": "build; git add .; git commit -m 'publish'; git subtree push --prefix dist origin page",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "build & publish"
 		}
 	]
 }
