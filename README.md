@@ -1,21 +1,6 @@
-# garden
+# Garden
 
-## Project setup
-```
-npm install
-```
+This is my personal website hosted on github-pages: https://rawenchilada.github.io/Garden/
+Currently you can find my cv on it.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+*work in progress*
