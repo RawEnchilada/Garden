@@ -6,6 +6,11 @@ export default {
     components: {
         Contacts
     },
+    data() {
+        return {
+            publicPath: process.env.BASE_URL
+        }
+    },
     mounted() {
         const items = document.querySelectorAll(".stage");
         const navHeight = document.querySelector("#nav").offsetheight;

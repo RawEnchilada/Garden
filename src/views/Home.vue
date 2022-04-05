@@ -1,14 +1,13 @@
 <template>
-<ScrollDesktop v-if="!isMobile()"/>
-
+    <ScrollDesktop v-if="!isMobile()" />
 </template>
 
 <script>
 import ScrollDesktop from "@/components/ScrollDesktop.vue";
 
-export default{
-    name:"Home",
-    components:{
+export default {
+    name: "Home",
+    components: {
         ScrollDesktop
     },
     methods: {
