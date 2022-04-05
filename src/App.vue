@@ -1,15 +1,23 @@
 <template>
     <div id="background"></div>
-    <Navbar />
     <router-view />
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+
+//import Navbar from "@/components/Navbar.vue";
 export default {
     name:"App",
     components:{
-        Navbar
+    },
+    mounted(){
+        if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+        } else {
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        }
     }
 }
 </script>
@@ -48,6 +56,7 @@ a:hover{
     --theme-color: #FFF4F0;
     --secondary-color: #d1d1d1;
     --line-color: #e07b1d;
+    --navbar-height: 0px;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--text-color);

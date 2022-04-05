@@ -1,25 +1,14 @@
 <template>
-    <ScrollDesktop v-if="!isMobile()" />
+    <Scroll />
 </template>
 
 <script>
-import ScrollDesktop from "@/components/ScrollDesktop.vue";
+import Scroll from "@/components/Scroll.vue";
 
 export default {
     name: "Home",
     components: {
-        ScrollDesktop
-    },
-    methods: {
-        isMobile() {
-            return false;
-            /*if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return true
-            } else {
-                return false
-            }*/
-        }
-
+        Scroll
     }
 }
 </script>

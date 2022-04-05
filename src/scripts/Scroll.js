@@ -8,12 +8,12 @@ export default {
     },
     data() {
         return {
-            publicPath: process.env.BASE_URL
+            publicPath: this.$store.state.publicPath
         }
     },
     mounted() {
         const items = document.querySelectorAll(".stage");
-        const navHeight = document.querySelector("#nav").offsetheight;
+        const navHeight = document.querySelector("#nav")?document.querySelector("#nav").offsetheight:0;
         const duration = (items[0].offsetHeight * 2); //Only samples the first element
 
         //clouds------------------------------------------------------------------------
@@ -114,30 +114,32 @@ export default {
 
 
             //exit---------------------------------------------------------
-            //text --------------------------
-            new ScrollMagic.Scene({
-                triggerElement: items[i],
-                duration: duration / 2,
-                offset: duration / 2
-            }).setTween(TweenMax.fromTo(text, 1, {
-                left: "0%",
-                display: "block"
-            }, {
-                opacity: 0,
-                left: "75%",
-                display: "none"
-            })).addTo(controller);
+            if(i < items.length - 1) {
+                //text --------------------------
+                new ScrollMagic.Scene({
+                    triggerElement: items[i],
+                    duration: duration / 2,
+                    offset: duration / 2
+                }).setTween(TweenMax.fromTo(text, 1, {
+                    left: "0%",
+                    display: "block"
+                }, {
+                    opacity: 0,
+                    left: "75%",
+                    display: "none"
+                })).addTo(controller);
 
-            //node --------------------------
-            new ScrollMagic.Scene({
-                triggerElement: items[i],
-                duration: duration / 2,
-                offset: duration / 2
-            }).setTween(new TweenMax.fromTo(node, 1, {
-                width: "30px", height: "30px", left: "-16px", top: "50%"
-            }, {
-                width: "0px", height: "0px", left: "-1px", top: "10%"
-            })).addTo(controller);
+                //node --------------------------
+                new ScrollMagic.Scene({
+                    triggerElement: items[i],
+                    duration: duration / 2,
+                    offset: duration / 2
+                }).setTween(new TweenMax.fromTo(node, 1, {
+                    width: "30px", height: "30px", left: "-16px", top: "50%"
+                }, {
+                    width: "0px", height: "0px", left: "-1px", top: "10%"
+                })).addTo(controller);
+            }
 
         }
     }

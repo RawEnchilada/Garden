@@ -30,6 +30,7 @@ export default{
     position: fixed;
     width: var(--contacts-width);
     height: 100%;
+    z-index: 10000;
 }
 #contacts>div{
     padding: 20px 0px 20px 20px;
