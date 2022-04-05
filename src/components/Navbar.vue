@@ -31,7 +31,7 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-    color: var(--line-color);
+    color: var(--header-color);
 }
 
 #nav a:hover{
