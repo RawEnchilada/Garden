@@ -51,11 +51,16 @@
 }
 .text h2{
     margin:0;
-    color:var(--highlight-color)
+    color:var(--highlight-color);
+}
+.text h3 {
+    color: var(--highlight-color);
+    margin-right: 2em;
+    margin-bottom: 0.5em;
 }
 .text h4{
     margin:0;
-    color:var(--lighter-text-color)
+    color:var(--lighter-text-color);
 }
 .text ul{
     margin-top: 3px;
@@ -79,27 +84,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-.dynamicList>*{
-    display:grid;
-    padding: 10px;
-    height: fit-content;
-}
-.gridHeader{
-    grid-column: 1 / span 2;
-    height: 1em;
-    padding-bottom: 0.5em;
-    font-weight: bold;
-}
-.gridElement{
-    height: 1em;
-    min-width: 50px;
-    padding-right: 5px;
-    padding-bottom: 0.1em;
-}
-.gridElement:nth-child(odd){
-    color:var(--highlight-color);
-    text-align: end;
 }
 @media (orientation: portrait) {
     .parallax{

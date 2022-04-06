@@ -80,8 +80,8 @@ a:hover{
     --text-color: #000000;
     --lighter-text-color: #585858;
     --highlight-color: #e45f32;
-    --bg-color: #cee6e7;
-    --theme-color: #FFF4F0;
+    --bg-color: #bee2e3;
+    --theme-color: #ffe2d8;
     --secondary-color: #d1d1d1;
     --header-color: #e07b1d;
 
@@ -93,10 +93,10 @@ a:hover{
 [data-theme="dark"] {
     --text-color: #FFF4F0;
     --lighter-text-color: #ebe0dc;
-    --highlight-color: #ee93b3;
+    --highlight-color: #ff90b7;
     --bg-color: #595B83;
-    --theme-color: #e098cb;
+    --theme-color: #cc8bb9;
     --secondary-color: #d1d1d1;
-    --header-color: #dd618b;
+    --header-color: #f4578d;
 }
 </style>
