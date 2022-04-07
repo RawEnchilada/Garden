@@ -1,6 +1,12 @@
 # Garden
 
+### About
 This is my personal website hosted on github-pages: https://rawenchilada.github.io/Garden/
-Currently you can find my cv on it.
+You can find a short portfolio here.
 
-*work in progress*
+### Made with
+- Vue 3
+- GSAP
+- ScrollMagic
+
+
