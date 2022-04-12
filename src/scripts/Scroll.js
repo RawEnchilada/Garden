@@ -29,7 +29,7 @@ export default {
             }))
             .addTo(controller);
 
-        for (let i = 0; i < items.length; i++) {
+        for (let i = 0; i < items.length-1; i++) {
             const text = items[i].querySelector(".text");
             const node = items[i].querySelector(".node");
             const parallax = items[i].querySelector(".parallax");
@@ -142,5 +142,27 @@ export default {
             }
 
         }
+        //last pin
+        new ScrollMagic.Scene({
+            triggerElement: items[items.length - 1],
+            triggerHook: "onLeave",
+            duration: duration,
+            offset: -navHeight
+        })
+        .setPin(items[items.length-1], { pushFollowers: false })
+        .addTo(controller);
+
+        //contact arrow
+        new ScrollMagic.Scene({
+            triggerElement: items[items.length-2],
+            triggerHook: "onLeave",
+            duration: duration /2
+        })
+        .setTween(new TweenMax.fromTo(document.querySelector("#contactArrow"), 1, {
+            opacity: 0
+        }, {
+            opacity: 1
+        }))
+        .addTo(controller);
     }
 };
