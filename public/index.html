@@ -21,6 +21,10 @@
     <div id="app"></div>
     <script>
         var controller = new ScrollMagic.Controller();
+        document.addEventListener("scroll", (gotevent)=>{
+            let he = document.getElementById("scroll-arrow");
+            if(he != null)he.classList.add("disappear");
+        },{passive: true});
     </script>
 </body>
 
