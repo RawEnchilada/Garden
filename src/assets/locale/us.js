@@ -6,9 +6,16 @@ export default {
     about:{
         title: 'About Me',
         description:[
-            "My passion for programming started when I was 16 years old, when I started learning how to program in C++ with Arduino.",
-            "Ever since then, I've been learning new technologies and programming languages, and I've been working on different projects, both personal and professional.",
-            "Currently I work mainly with web technologies, but in my free time I like to learn about other technologies, such as game development, mobile development, and more."
+            "I developed a passion for programming when I began learning C++ with Arduino at the age of 16.",
+            "Ever since then, I've been learning new technologies and programming languages and I've been working on different projects, both personal and professional.",
+            "Currently I work mainly with Web Development, but in my free time I like to learn about other technologies, such as Game Development, Devops, Machine Learning and more."
+        ],
+        highlight:[
+            "C++ with Arduino",
+            "Web Development",
+            "Game Development",
+            "Devops",
+            "Machine Learning"
         ]
     },
     skills:{
@@ -19,7 +26,7 @@ export default {
         title: 'References',
         description: [
             'Check out some of my projects on github',
-            'You can also read my thesis that I\'m currently working on about the application of Artificial Intelligence for data retrieval',
+            'Read about my ongoing thesis: The Application of Artificial Intelligence for Data Retrieval',
             'Or you can check out my LinkedIn profile'
         ]
     },

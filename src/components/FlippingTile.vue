@@ -1,5 +1,5 @@
 <template>
-<div class="tile" :title="props.title" ref="tile" @mouseover="flip()" @touchover="flip()">
+<div class="tile" :class="{'hint':props.hint}" :title="props.title" ref="tile" @mouseover="flip()" @touchover="flip()">
     <div class="frontface">
         <img :src="`${publicPath}skills/${props.src}.svg`" :alt="props.title" />
     </div>
@@ -21,11 +21,18 @@ const props = defineProps({
     src: {
         type: String,
         required: true
+    },
+    hint: {
+        type: Boolean,
+        default: false
     }
 });
 
 function flip(){
     tile.value.classList.add('flip');
+    if(props.hint){
+        tile.value.classList.remove('hint');
+    }
 }
 
 </script>
@@ -44,8 +51,8 @@ function flip(){
     width: 5rem;
     height: 5rem;
 }
-.tile:hover{
-    box-shadow: -5px -5px 5px var(--secondary-highlight-color);
+.tile:hover>.backface{
+    box-shadow: 5px 5px 10px var(--secondary-highlight-color);
 }
 .tile>div{
     width:100%;
@@ -64,11 +71,37 @@ function flip(){
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 5px 5px 10px #000;
+    box-shadow: -5px 5px 10px #000;
 }
 .flip{
     transform: rotateY(180deg);
 }
+.flip>.backface{
+    box-shadow: 5px 5px 10px #000;
+}
+.tile.hint{
+    animation: flip-hint 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flip-hint{
+    0%{
+        transform: rotateY(0deg);
+    }
+    40%{
+        transform: rotateY(0deg);
+    }
+    70%{
+        transform: rotateY(75deg);
+    }
+    85%{
+        transform: rotateY(135deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
 @media (max-width: 768px) {
     .tile{
         width: 3rem;

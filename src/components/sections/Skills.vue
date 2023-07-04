@@ -3,7 +3,7 @@
     <h1 class="title">{{ content.title }}</h1>
     <div class="description">{{ content.description }}</div>
     <div class="skill-grid">
-        <FlippingTile :src="'dart'" :title="'Dart'" />   
+        <FlippingTile :src="'dart'" :title="'Dart'" :hint="!isMobile"/>   
         <FlippingTile :src="'kotlin'" :title="'Kotlin'" />   
         <FlippingTile :src="'node'" :title="'Node.js'" />            
         <FlippingTile :src="'typescript'" :title="'TypeScript'" />            
@@ -28,6 +28,8 @@ import FlippingTile from '@/components/FlippingTile.vue';
 import textMap from '@/scripts/locale.js';
 
 const content = ref(textMap.skills);
+
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
 </script>
 
